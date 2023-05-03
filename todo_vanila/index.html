@@ -1,13 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<head>
+    <meta charset="UTF-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="./src/style.css"/>
+</head>
+<body class="page">
+<main class="page-container">
+    <div class="content">
+        <section class="current-info">
+            <h1 class="date">03 May 2023</h1>
+            <p class="tasks-counter">5 Tasks</p>
+        </section>
+        <section class="todo-container">
+            <ul class="todo-list">
+                <li class="todo-item">
+                    <input type="checkbox" class="todo-completed"/>
+                    <div class="description-container">
+                        <p class="todo-description">Написать туду лист</p>
+                        <span class="todo-tag">#учеба</span>
+                    </div>
+                </li>
+                <li class="todo-item">
+                    <input type="checkbox" class="todo-completed"/>
+                    <div class="description-container">
+                        <p class="todo-description">Написать туду лист на реакт</p>
+                        <span class="todo-tag">#учеба</span>
+                    </div>
+                </li>
+                <li class="todo-item">
+                    <input type="checkbox" class="todo-completed"/>
+                    <div class="description-container">
+                        <p class="todo-description">Выпить колеса</p>
+                        <span class="todo-tag">#здоровье</span>
+                    </div>
+                </li>
+                <li class="todo-item">
+                    <label>
+                        <input type="checkbox" class="todo-completed"/>
+                        <span class="pseudo-checkbox"></span>
+                    </label>
+                    <div class="description-container">
+                        <p class="todo-description">Приготовить еды</p>
+                        <span class="todo-tag">#дом</span>
+                    </div>
+                </li>
+                <li class="todo-item">
+                    <input type="checkbox" class="todo-completed"/>
+                    <div class="description-container">
+                        <p class="todo-description">Выжитб</p>
+                        <span class="todo-tag">#выживание</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="button-container">
+        <button class="todo-button"></button>
+    </div>
+
+</main>
+<script type="module" src="/src/main.ts"></script>
+</body>
 </html>

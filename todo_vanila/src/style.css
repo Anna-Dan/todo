@@ -1,97 +1,137 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.page {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF500;
+    font-family: "Inter", "Arial", sans-serif;
+    color: #303030;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.page-container {
+    max-width: 1082px;
+    min-width: 320px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.content {
+    margin: 0 auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.current-info {
+    margin: 0 0 32px 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
+.date {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    margin: 205px 0 0 0;
 }
 
-.card {
-  padding: 2em;
+.tasks-counter {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 8px 0 0 0;
 }
 
-.read-the-docs {
-  color: #888;
+.todo-list {
+    list-style: none;
+    padding: 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.todo-item {
+    display: flex;
+    align-items: center
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.todo-completed {
+    display: none;
 }
+
+.pseudo-checkbox::before {
+    content: "\00A0";
+    display: inline-block;
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 24px;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    line-height: 27px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.todo-completed:checked + .pseudo-checkbox::before {
+    content: "\2713";
+}
+
+/*.todo-completed:checked + .todo-description {*/
+/*    text-decoration: line-through;*/
+/*}*/
+
+.description-container {
+    margin: 0 0 24px 16px;
+}
+
+.todo-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0;
+    padding: 0;
+}
+
+.todo-tag {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 44px 35px 0;
+}
+
+.todo-button {
+    width: 56px;
+    height: 56px;
+    border-radius: 50px;
+    border: none;
+    padding: 0;
+    background-color: #000000;
+    background-image: url(./images/add-button.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+
+}
+
+.todo-button:hover {
+    opacity: 0.8;
+}
+
+
