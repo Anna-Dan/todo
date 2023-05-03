@@ -60,9 +60,55 @@
         </section>
     </div>
     <div class="button-container">
-        <button class="todo-button"></button>
+        <button class="todo-button button"></button>
     </div>
-
+    <div class="popup popup-opened">
+        <section class="popup-container">
+            <div class="close-button-container">
+                <button
+                        class="close-button button"
+                        type="button"
+                        title="Закрыть окно"
+                        aria-label="Закрыть"
+                ></button>
+            </div>
+            <form class="popup-form">
+                <fieldset class="popup-fieldset">
+                    <label for="todo" class="input-label">To-do</label>
+                    <input
+                            type="text"
+                            class="popup-input popup-input_type_todo"
+                            name="todo"
+                            id="todo"
+                            placeholder="New to-do"
+                    />
+                    <label for="tag" class="input-label">Tags</label>
+                    <select
+                            id="tag"
+                            name="tag"
+                            class="popup-input">
+                        <option selected>Add tags</option>
+                        <option>учеба</option>
+                        <option>дом</option>
+                        <option>здоровье</option>
+                        <option>выживание</option>
+                        <option>работа</option>
+                    </select>
+                    <label for="date" class="input-label">Deadline</label>
+                    <input
+                            type="date"
+                            class="popup-input popup-input_type_date"
+                            name="date"
+                            id="date"
+                    />
+                </fieldset>
+                <div class="button-container">
+                    <button class="save-button button" type="submit">
+                    </button>
+                </div>
+            </form>
+        </section>
+    </div>
 </main>
 <script type="module" src="/src/main.ts"></script>
 </body>

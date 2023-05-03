@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .content {
@@ -27,6 +27,51 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.popup {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: #303030;
+    margin: 0;
+    padding: 0;
+}
+
+.popup-opened {
+    display: flex;
+}
+
+.popup-fieldset {
+    border: none;
+    padding: 0;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.popup-container {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.popup-form {
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .current-info {
@@ -115,23 +160,65 @@
     margin: 0 44px 35px 0;
 }
 
-.todo-button {
+.button {
     width: 56px;
     height: 56px;
     border-radius: 50px;
     border: none;
     padding: 0;
     background-color: #000000;
-    background-image: url(./images/add-button.svg);
     background-repeat: no-repeat;
     background-position: center;
     transition: opacity 0.5s ease;
     cursor: pointer;
-
 }
 
-.todo-button:hover {
+.button:hover {
     opacity: 0.8;
 }
 
+.save-button {
+    background-color: #FFFFFF;
+    background-image: url(./images/submit-button.svg);
+}
 
+.todo-button {
+    background-color: #000000;
+    background-image: url(./images/add-button.svg);
+}
+
+.close-button {
+    background-color: transparent;
+    background-image: url(./images/close-button.svg);
+    width: 26px;
+    height: 26px;
+}
+
+.close-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 20px 0 0;
+}
+
+.input-label {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFF500;
+    margin-top: 32px;
+}
+
+.input-label:first-child {
+    margin-top: 0;
+}
+.popup-input {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    border: none;
+    background-color: transparent;
+    margin-top: 8px;
+}
